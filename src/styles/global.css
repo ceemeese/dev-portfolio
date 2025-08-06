@@ -1,16 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 
 
-body {
-    @apply grid place-content-center p-20;
+@theme {
+    --color-primary: #F9FAFB;
+    --color-secondary: #F1A208;
+    --font-sans: 'Azeret Mono', sans-serif;
 }
 
-body > div {
-    @apply container;
+
+body {
+    @apply flex flex-col;
+    background-image: radial-gradient(circle 700px at 50% 50%, rgba(16,185,129,0.35), transparent);
+    overscroll-behavior: none;
+    min-height: 100vh;
 }
+
 
 main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

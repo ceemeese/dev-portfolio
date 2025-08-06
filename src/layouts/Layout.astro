@@ -1,4 +1,5 @@
 ---
+import Header from '../components/Header.astro';
 import '../styles/global.css';
 ---
 
@@ -8,11 +9,31 @@ import '../styles/global.css';
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio</title>
+		<link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+		<title>Cristina Malmierca - Proyectos &amp; Portfolio | Cristina Malmierca</title>
 	</head>
-	<body>
-		<div>
-			<slot />
+	<body class="relative dark:bg-[#020617]">
+		<div
+		class="absolute inset-0 z-0 top-0 bottom-0 min-h-screen w-full"
+		>
 		</div>
+      <Header />
+      <slot />
+
 	</body>
+
+	
 </html>
+
+
+<style>
+
+  :global(.dark) {
+	color: #fff;
+  }
+
+  :global(.dark) body {
+	background-color: #020617;
+  }
+</style>
+
