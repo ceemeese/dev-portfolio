@@ -71,6 +71,7 @@ const title: Title = {
 
 <script>
 
+    //Apertura de menú mobile
     const navButton = document.getElementById('nav__button');
     const navMobile = document.getElementById('nav__mobile');
     var isMenuOpen = false;
@@ -99,6 +100,17 @@ const title: Title = {
             navMobile?.classList.add('opacity-0', 'invisible', '-translate-y-full');
         }
     })
+
+
+    //Cierre de menú mobile al seleccionar enlace
+    document.querySelectorAll('#nav__mobile a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (isMenuOpen) {
+                    navButton?.click();
+                }
+        });
+    });
+
 
 
 </script>

@@ -7,8 +7,8 @@
 
 
 @theme {
-    --color-primary: #FFFFFF;
-    --color-secondary: #FFC300;
+    --color-primary: #F9FAFB;
+    --color-secondary: #F1A208;
     --font-sans: 'Azeret Mono', sans-serif;
 }
 
@@ -25,9 +25,4 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-section {
-    @apply h-screen;
-    @apply flex flex-col items-center;
 }
