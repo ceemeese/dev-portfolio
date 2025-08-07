@@ -9,17 +9,16 @@ import '../styles/global.css';
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
 		<title>Cristina Malmierca - Proyectos &amp; Portfolio | Cristina Malmierca</title>
 	</head>
 	<body class="relative dark:bg-[#020617]">
 		<div
-		class="absolute inset-0 z-0 top-0 bottom-0 min-h-screen w-full"
+		class="absolute inset-0 top-0 bottom-0 min-h-screen w-full pointer-events-none"
 		>
 		</div>
-      <Header />
-      <slot />
-
+		<Header />
+		<slot />
 	</body>
 
 	
