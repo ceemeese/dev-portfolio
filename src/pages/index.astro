@@ -1,8 +1,16 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
+import Presentation from '../components/Presentation.astro';
+import Section from '../components/Section.astro';
 ---
 
 <Layout>
-
+    <main class="px-5">
+        <Section id="presentation" class="py-30 md:py-40">
+            <Presentation >
+                <slot />
+            </Presentation >
+        </Section>
+    </main>
 </Layout>

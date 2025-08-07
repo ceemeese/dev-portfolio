@@ -1,0 +1,41 @@
+---
+ const personalImageAlt = "Cristina Malmierca"
+ import BadgetWork from "./BadgetWork.astro"
+ import Button from "./Button.astro"
+ import ContactIcon from "./ContactIcon.astro"
+ import LinkIcon from "./LinkIcon.astro"
+ import GitIcon from "./GitIcon.astro"
+---
+
+<div class="max-w-3xl">
+
+    <div class="flex items-center gap-5 mb-3 md:mb-5">
+        <img src="/perfil.png" alt=`${personalImageAlt}` class="size-20 rounded-full mb-2 md:mb-4 shadow-2xl" />
+        <BadgetWork>Disponible para trabajar</BadgetWork>
+    </div>
+
+    <div>
+        <h1 class="text-4xl md:text-5xl font-thin mb-2 [&>strong]:font-bold">¡Hey!</br>soy <strong>Cristina Malmierca</strong></h1>
+        <p class="mt-6 text-lg md:text-xl dark:[&>strong]:text-secondary [&>strong]:font-semibold dark:text-primary">
+            En formación continua, explorando cada parte del desarrollo web con curiosidad, disciplina y disfrutando el proceso de aprendizaje
+        </p>
+        <p class="mt-6 text-lg md:text-xl dark:[&>strong]:text-secondary [&>strong]:font-semibold dark:text-primary"><strong>Estudiante de Desarrollo de Aplicaciones Web</strong> y <strong>Técnico Superior en Márketing y Publicidad</strong> de Lleida, España 🇪🇸
+        </p>
+    </div>
+
+    <nav class="flex items-center gap-5 mt-6">
+        <Button href="mailto:cmsalvador92@gmail.com">
+            <ContactIcon />
+            <span>Contáctame</span>
+        </Button>
+        <Button href="https://www.linkedin.com/in/cristina-malmierca/">
+            <LinkIcon />
+            <span>Linkedin</span>
+        </Button>
+        <Button href="https://github.com/ceemeese">
+            <GitIcon />
+            <span>Github</span>
+        </Button>
+    </nav>
+
+</div>
