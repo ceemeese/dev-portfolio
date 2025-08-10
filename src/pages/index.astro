@@ -1,16 +1,22 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
-import Presentation from '../components/Presentation.astro';
+import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
+import ArrowIcon from '../components/ArrowIcon.astro';
 ---
 
 <Layout>
-    <main class="px-5">
-        <Section id="presentation" class="py-30 md:py-40">
-            <Presentation >
+    <main class="px-5 flex flex-col items-center">
+        <Section id="hero" class="py-35 md:py-40 flex flex-col justify-center items-center">
+            <Hero >
                 <slot />
-            </Presentation >
+            </Hero >
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                <ArrowIcon />
+            </div>
         </Section>
+        
+        
     </main>
 </Layout>

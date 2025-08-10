@@ -1,24 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
     --color-primary: #F9FAFB;
-    --color-secondary: #F1A208;
+    --color-secondary: #A3D000;
     --color-dark: #000000;
-    --font-sans: 'Onest', sans-serif;
+    --color-contrast: #000000;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --bg-primary: #F9FAFB;
+    --bg-dark: #000000;
+
+    --animate-rotate-border: border-rotate 3s linear infinite;
+    @keyframes border-rotate {
+        to {
+            --border-angle: 360deg;
+        }
+    }
 }
+
+
 
 
 body {
     @apply flex flex-col;
-    background-image: radial-gradient(circle 700px at 50% 50%, rgba(16,185,129,0.35), transparent);
     overscroll-behavior: none;
     min-height: 100vh;
+    transition: all 0.3s ease-in-out;
+    background-color: #F9FAFB;
 }
 
 
@@ -27,3 +41,11 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
