@@ -2,14 +2,14 @@
 const { name, icon } = Astro.props;
 ---
 
-<li>
-  <article class="flex items-center justify-center rounded-full bg-white text-dark border-2 border-gray-200 hover:border-secondary transition-all py-1.5 transition-color duration-300 hover:shadow-md gap-2">
+<li class="flex-nowrap">
+  <div class="flex items-center justify-center rounded-full bg-white text-dark border-2 border-gray-200 hover:border-secondary transition-all py-1.5 transition-color duration-300 hover:shadow-md gap-2 mt-1 md:w-32 md:h-32 md:flex md:flex-col md:rounded-3xl md:hover:scale-105">
       <img
               src={`../iconos/${icon}.svg`}
               alt={icon}
-              class="h-4 w-auto object-contain transition-transform group-hover:scale-110"
+              class="h-4 md:h-11 w-auto object-contain transition-transform group-hover:scale-110"
               loading="lazy"
             />
-      <span class="text-xs font-normal text-center whitespace-nowrap overflow-hidden overflow-ellipsis max-w-full">{name}</span>
-    </article>
+      <span class="text-xs font-normal md:text-md md:font-medium text-center whitespace-nowrap overflow-hidden overflow-ellipsis max-w-full">{name}</span>
+  </div>
 </li>

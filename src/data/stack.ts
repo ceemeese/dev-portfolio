@@ -30,10 +30,10 @@ const StackItems: StackItem[] = [
     {name: 'Jest', icon: 'jest'},
     {name: 'Figma', icon: 'figma'},
     {name: 'Notion', icon: 'notion'},
-    {name: 'Trabajo en equipo', icon: ''},
-    {name: 'Adaptabilidad', icon: ''},
-    {name: 'Proactividad', icon: ''},
-    {name: 'Resolución de problemas', icon: ''},
+    {name: 'Trabajo en equipo', icon: 'social2'},
+    {name: 'Adaptabilidad', icon: 'social2'},
+    {name: 'Proactividad', icon: 'social2'},
+    {name: 'Resolución de problemas', icon: 'social2'},
 ];
 
 export default StackItems;
