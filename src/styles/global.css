@@ -24,22 +24,25 @@
     }
 }
 
+* {
+    box-sizing: border-box;
+}
 
-
-
-body {
-    @apply flex flex-col;
-    overscroll-behavior: none;
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     min-height: 100vh;
-    transition: all 0.3s ease-in-out;
-    background-color: #F9FAFB;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    transition: all 0.3s ease-in-out;
+    background-color: #F9FAFB;
 }
 
 
@@ -48,4 +51,6 @@ main {
     inherits: false;
     initial-value: 0deg;
 }
+
+
 

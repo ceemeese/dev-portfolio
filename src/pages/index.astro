@@ -3,12 +3,13 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
-import ArrowIcon from '../components/ArrowIcon.astro';
+import ArrowIcon from '../components/svg/ArrowIcon.astro';
+import Stack from '../components/Stack.astro';
 ---
 
 <Layout>
-    <main class="px-5 flex flex-col items-center">
-        <Section id="hero" class="py-35 md:py-40 flex flex-col justify-center items-center">
+    <main class="px-5 flex flex-col items-center w-full z-20 max-w-full">
+        <Section id="hero" class="py-35 md:py-40 flex flex-col justify-center items-center min-h-screen">
             <Hero >
                 <slot />
             </Hero >
@@ -16,7 +17,8 @@ import ArrowIcon from '../components/ArrowIcon.astro';
                 <ArrowIcon />
             </div>
         </Section>
-        
-        
+        <Section id="skills" class="py-15 md:py-20 flex flex-col">
+            <Stack />
+        </Section>
     </main>
 </Layout>
