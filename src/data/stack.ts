@@ -33,7 +33,7 @@ const StackItems: StackItem[] = [
     {name: 'Trabajo en equipo', icon: 'social2'},
     {name: 'Adaptabilidad', icon: 'social2'},
     {name: 'Proactividad', icon: 'social2'},
-    {name: 'Resolución de problemas', icon: 'social2'},
+    {name: 'Comunicación', icon: 'social2'},
 ];
 
 export default StackItems;

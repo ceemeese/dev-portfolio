@@ -1,20 +1,31 @@
 ---
 import StackCard from './StackCard.astro';
-import StackNav from './StackNav.astro';
 import StackItems from '../data/stack.ts';
-
+import StackNav from './StackNav.vue';
+import navItems from '../data/stacknav.ts';
 
 ---
 
 <div class="flex flex-col">
     <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-linear-to-r from-secondary via-green-500 to-emerald-500 inline-block text-transparent bg-clip-text">Soft & Tech Skills</h2>
-    <StackNav /> 
     
+    <StackNav client:visible items={navItems} />
+
     <div class="w-full overflow-hidden">
         <ul class="grid grid-cols-2 gap-1 md:flex md:py-4 md:gap-4 md:justify-center md:flex-nowrap md:min-w-max md:h-40 md:animate-scroll">
-            {[...StackItems, ...StackItems].map(item => (
+            {[...StackItems].map(item => (
                 <StackCard name={item.name} icon={item.icon} />
+            ))}
+            {[...StackItems].map(item => (
+                <StackCard name={item.name} icon={item.icon} className="hidden md:block" class="hidden md:block" />
             ))}
         </ul>
     </div>
 </div>
+
+
+<style>
+[data-icon] {
+    width: 20px;
+    height: 20px;
+}
