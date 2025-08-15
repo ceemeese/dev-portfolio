@@ -15,7 +15,7 @@
     --font-mono: 'JetBrains Mono', monospace;
     --bg-primary: #F9FAFB;
     --bg-dark: #000000;
-    --animate-scroll: scroll 90s linear infinite;
+    --animate-scroll: scroll 45s linear infinite;
 
     @keyframes scroll {
         0% {
@@ -23,7 +23,7 @@
             
         }
         100% {
-            transform: translateX(-100%);
+             transform: translateX(calc(-50%));
         }
     }
 }
@@ -54,6 +54,5 @@ body {
     transition: all 0.3s ease-in-out;
     background-color: #F9FAFB;
 }
-
 
 

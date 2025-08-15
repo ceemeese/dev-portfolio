@@ -1,0 +1,12 @@
+---
+interface Props {
+  class?: string
+  title: string
+}
+
+const { class: className, title } = Astro.props
+---
+
+<h2 class:list={[`[text-3xl md:text-4xl font-bold mb-4 bg-linear-to-r from-secondary via-green-500 to-emerald-500 inline-block text-transparent bg-clip-text`, className ]}>
+    {title}
+</h2>

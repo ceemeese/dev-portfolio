@@ -1,0 +1,58 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { navItem } from './types/stacknavType';
+
+const items: navItem[] = Astro.props.items;
+
+---
+<nav class="flex items-center gap-5 md:justify-between transform transition-custom overflow-x-auto py-2 mb-3 md:mb-1 md:scrollbar-hidden text-nowrap">
+    {
+        items.map((item, index) => (
+            <a
+                class={`nav__item flex gap-1 items-center relative group transition-custom cursor-pointer ${index === 0 ? 'text-secondary font-semibold' : ''}`}
+                role="button"
+                aria-label={item.label}
+                >
+
+                <Icon name={`lucide:${item.icon}`}/>
+                { item.label }
+                <span class={`absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300 ${index === 0 ? 'w-full' : ''}`}> </span>
+            </a>
+        ))
+    }
+    
+</nav>
+
+
+<script>
+
+      const links = document.getElementsByClassName('nav__item');
+
+        Array.from(links).forEach((link) => {
+            link.addEventListener('click', () => {
+                
+                //Desactivar links
+                Array.from(links).forEach(l => {
+                l.classList.remove('text-secondary', 'font-semibold');
+                const span = l.querySelector('span');
+                if (span) span.classList.remove('w-full');
+                });
+
+                // Activar solo el clickeado
+                link.classList.add('text-secondary', 'font-semibold');
+                const span = link.querySelector('span');
+                if (span) span.classList.add('w-full');
+            });
+        });
+            
+            
+</script>
+
+<style>
+
+    [data-icon] {
+        width: 20px;
+        height: 20px;  
+    }
+
+</style>
