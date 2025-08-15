@@ -15,37 +15,44 @@
     --font-mono: 'JetBrains Mono', monospace;
     --bg-primary: #F9FAFB;
     --bg-dark: #000000;
+    --animate-scroll: scroll 45s linear infinite;
 
-    --animate-rotate-border: border-rotate 3s linear infinite;
-    @keyframes border-rotate {
-        to {
-            --border-angle: 360deg;
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+            
+        }
+        100% {
+             transform: translateX(calc(-50%));
         }
     }
 }
 
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
 
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 
 body {
-    @apply flex flex-col;
-    overscroll-behavior: none;
-    min-height: 100vh;
     transition: all 0.3s ease-in-out;
     background-color: #F9FAFB;
 }
 
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-@property --border-angle {
-    syntax: "<angle>";
-    inherits: false;
-    initial-value: 0deg;
-}
 

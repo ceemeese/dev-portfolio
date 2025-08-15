@@ -2,13 +2,13 @@
  const personalImageAlt = "Cristina Malmierca"
  import BadgetWork from "./BadgetWork.astro"
  import Button from "./Button.astro"
- import ContactIcon from "./ContactIcon.astro"
- import LinkIcon from "./LinkIcon.astro"
- import GitIcon from "./GitIcon.astro"
- import PinIcon from "./PinIcon.astro"
+ import ContactIcon from "./svg/ContactIcon.astro"
+ import LinkIcon from "./svg/LinkIcon.astro"
+ import GitIcon from "./svg/GitIcon.astro"
+ import PinIcon from "./svg/PinIcon.astro"
 ---
 
-<div class="max-w-xl max-h-screen md:flex md:justify-center md:items-center md:flex-col md:text-center p-5">
+<div class="max-w-xl md:flex md:justify-center md:items-center md:flex-col md:text-center">
 
     <div class="flex justify-between items-center">
         <div class="flex items-center gap-5 mb-5">
@@ -16,7 +16,7 @@
                 <img src="/perfilweb.webp" alt=`${personalImageAlt}` class="size-20 rounded-full shadow-2xl" />
             </div>
             <div>
-                <BadgetWork>Disponible para trabajar</BadgetWork>
+                <BadgetWork>Open to work</BadgetWork>
                 <div class="flex text-xs gap-1 items-center mt-1">
                     <PinIcon /> <p>Lleida, España</p>
                 </div>

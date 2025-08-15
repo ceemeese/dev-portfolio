@@ -1,0 +1,147 @@
+---
+//importación de componentes
+import StackCard from './StackCard.astro';
+import SectionTitle from './SectionTitle.astro';
+
+//importación de datos
+import { STACKITEMS } from '../consts/stack.ts';
+import { NAVITEMS } from '../consts/stacknav.ts';
+
+//importación iconos
+import { Icon } from 'astro-icon/components';
+
+
+---
+
+<div class="flex flex-col">
+
+    <SectionTitle title="Soft & Tech Skills" />
+
+    <!-- Navbar de Stack  -->
+    <nav class="flex items-center gap-5 md:justify-between transform transition-custom overflow-x-auto py-2 mb-3 md:mb-1 md:scrollbar-hidden text-nowrap">
+    {
+        NAVITEMS.map((item, index) => (
+            <a
+                class={`nav__item flex gap-1 items-center relative group transition-custom cursor-pointer ${index === 0 ? 'text-secondary font-semibold' : ''}`}
+                role="button"
+                aria-label={item.label}
+                id={item.id}
+                >
+
+                <Icon name={`lucide:${item.icon}`}/>
+                { item.label }
+                <span class={`absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300 ${index === 0 ? 'w-full' : ''}`}> </span>
+            </a>
+        ))
+    }
+    </nav>
+
+
+    <div class="w-full overflow-hidden">
+        <ul id="stacklist" class="p-1 grid grid-cols-2 gap-1 md:flex md:py-4 md:gap-4 md:justify-center md:flex-nowrap md:min-w-max md:h-40 md:animate-scroll">
+            {[...STACKITEMS].map(item => (
+                <StackCard name={item.name} icon={item.icon} classLiName={`scroll-1 stack-item ${item.category}`} />
+            ))}
+            {[...STACKITEMS].map(item => (
+                <StackCard name={item.name} icon={item.icon} classLiName={`scroll-2 stack-item hidden md:block ${item.category}`} />
+            ))}
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+
+    var selectedNav: string = '';
+
+    const links: HTMLCollection = document.getElementsByClassName('nav__item');
+    const stacklist: HTMLElement | null = document.getElementById('stacklist');
+    const cards: HTMLCollection = document.getElementsByClassName('scroll-1');
+    const cardsScroll: HTMLCollection = document.getElementsByClassName('scroll-2');
+
+        Array.from(links).forEach((link) => {
+            link.addEventListener('click', () => {
+
+                selectedNav = link.id;
+
+                //Desactivar links
+                Array.from(links).forEach(l => {
+                l.classList.remove('text-secondary', 'font-semibold');
+                const span = l.querySelector('span');
+                if (span) span.classList.remove('w-full');
+                });
+
+                // Activar solo el clickeado
+                link.classList.add('text-secondary', 'font-semibold');
+                const span = link.querySelector('span');
+                if (span) span.classList.add('w-full');
+
+                if(selectedNav !== 'todo') {
+
+                    stacklist?.classList.remove('md:animate-scroll');
+                    stacklist?.classList.remove('md:h-40');
+
+                    stacklist?.classList.replace('md:flex-nowrap', 'md:flex-wrap');                    
+                    stacklist?.classList.replace('md:justify-center', 'md:justify-start');
+                    stacklist?.classList.replace('md:min-w-max', 'md:max-w-full');
+
+                    stacklist?.classList.add('md:justify-between');
+
+
+                    Array.from(cardsScroll).forEach((card) => {
+                        card.classList.add('hidden');
+                        card.classList.remove('md:block');
+                    });
+
+                    Array.from(cards).forEach((card) => {
+                        card.classList.add('hidden');
+                        card.classList.remove('block');
+                    });
+
+
+                    Array.from(cards).forEach((card) => {
+                        if (card.classList.contains(selectedNav)) {
+                            card.classList.remove('hidden');
+                            card.classList.add('block');
+                        }
+                    });
+                    
+                } else {
+                    
+                    stacklist?.classList.add('md:animate-scroll');
+                    stacklist?.classList.add('md:h-40');
+
+                    stacklist?.classList.replace('md:flex-wrap', 'md:flex-nowrap');                    
+                    stacklist?.classList.replace('md:justify-start', 'md:justify-center');
+                    stacklist?.classList.replace('md:max-w-full', 'md:min-w-max');
+
+                    stacklist?.classList.remove('md:justify-between');
+                    
+                    Array.from(cards).forEach((card) => {
+                        card.classList.remove('hidden');
+                        card.classList.add('block');
+                    });
+
+                    
+                    Array.from(cardsScroll).forEach((card) => {
+                        card.classList.remove('hidden');
+                        card.classList.add('md:block');
+                    });
+                }
+            });
+        });
+
+
+                  
+</script>
+
+<style>
+
+[data-icon] {
+    width: 20px;
+    height: 20px;
+}
