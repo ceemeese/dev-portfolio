@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
         title: "Gestor de juegos de mesa",
         description: "Aplicación de asignatura Entorno Desarrollo para administrar partidas de juegos de mesa con panel de control de administrador. Incluye testing, despliegue en AWS, CI/CD y Wiki del backend en Github.",
         image: "/images/boardgames.png",
-        technologies: ["Node.js", "Express", "MariaDB", "Hoppscotch", "Jest", "AWS", "Docker", "Grafana", "Bootstrap"],
+        technologies: ["Node.js", "Express.js", "MySQL", "Hoppscotch", "Jest", "AWS", "Docker", "Grafana"],
         url: "https://github.com/ceemeese/boardgames"
     },
     {
@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
         title: "API cómics",
         description: "API RESTful para gestionar una colección de cómics, permitiendo realizar operaciones CRUD. Incluye autenticación JWT, colección en Hoppscotch y dockerizada. Proyecto para asignatura entorno desarrollo servidor.",
         image: "/images/comicmanagerapi.png",
-        technologies: ["C#", "Docker", "JWT", "Hoppscotch", "Swagger"],
+        technologies: ["C#", "Docker", "Hoppscotch", "MySQL"],
         url: "https://github.com/ceemeese/comic-manager-api"
     }
 ];
