@@ -1,0 +1,46 @@
+---
+import SectionTitle from "../components/SectionTitle.astro"
+import ProjectCard from "../components/ProjectCard.astro";
+import BadgetTag from "../components/BadgetTag.astro";
+import { STACKITEMS } from "../consts/stack";
+import { PROJECTS } from "../consts/projects";
+
+const projectMerged = PROJECTS.map(project => {
+    const stack = STACKITEMS.filter(item => project.technologies.includes(item.name));
+    return {
+        ...project,
+        stack
+    }
+});
+
+---
+
+<div class="flex flex-col">
+
+    <SectionTitle title="Proyectos" />
+
+    <div class="flex flex-col gap-[50px] lg:grid lg:grid-cols-2 items-align">
+        {
+            projectMerged.map(project => (
+
+                <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    image={project.image}
+                    url={project.url}>
+                    {
+                        project.stack.map(item => (
+                            
+                                <BadgetTag slot="tags" icon={item.icon}>
+                                    <p>{item.name}</p>
+                                </BadgetTag>
+                              
+                        ))
+                    }
+                </ProjectCard>
+            ))
+        }
+        
+    </div>
+
+</div>

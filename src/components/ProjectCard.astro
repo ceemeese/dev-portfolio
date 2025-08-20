@@ -1,0 +1,73 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+}
+
+const { title, description, image, url } = Astro.props;
+---
+
+<div class="card max-w-full lg:max-w-lg py-2 rounded-2xl">
+    <a href={url} target="_blank">
+        <div class="card__content py-3 cursor-pointer">
+            <div class="card__container-image overflow-hidden rounded-md w-full">
+                <img src={image} alt="" class="card__image rounded-md md:h-[350px] lg:h-[300px] object-cover w-full ">
+            </div>
+            <div class="py-2">
+                <h1 class="card__title text-base md:text-xl font-normal">{title}</h1>
+                <div class="py-2">
+                    <p class="card__description text-gray-500 dark:text-primary text-wrap font-light">{description}</p>
+                </div>
+            </div>
+            <div class="card__tags flex flex-wrap gap-2 transform translate-y-2 text-black ">
+                <slot name="tags" />
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<script>   
+    import { animate, onScroll } from 'animejs';
+
+    const cards: NodeListOf<HTMLDivElement> | null = document.querySelectorAll('.card');
+    
+
+    if (cards !== null) {
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                animate(card, { scale: 1.05 });
+
+                const title: HTMLHeadingElement | null = card.querySelector('.card__title');
+                if (title) {
+                    animate(title, { color: '#A3D000' });
+                }
+
+            });
+            card.addEventListener('mouseleave', () => {
+                animate(card, { scale: 1 });
+
+                const title: HTMLHeadingElement | null = card.querySelector('.card__title');
+                if (title) {
+                    animate(title, { color: '#000' });
+                }
+            });
+        });
+    }
+
+    animate('.card', {
+        opacity: [0, 1],              
+        translateY: [75, 0],          
+        duration: 1500,
+        easing: 'easeInOutQuad',
+
+        autoplay: onScroll({
+            
+        }),
+        enter: 'bottom top',
+        leave: 'top bottom'
+    });
+
+</script>

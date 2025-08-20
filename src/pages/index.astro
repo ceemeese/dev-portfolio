@@ -1,10 +1,11 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
+import Hero from '../sections/Hero.astro';
 import Section from '../components/Section.astro';
 import ArrowIcon from '../components/svg/ArrowIcon.astro';
-import Stack from '../components/Stack.astro';
+import Stack from '../sections/Stack.astro';
+import Projects from '../sections/Projects.astro';
 ---
 
 <Layout>
@@ -17,8 +18,11 @@ import Stack from '../components/Stack.astro';
                 <ArrowIcon />
             </div>
         </Section>
-        <Section id="skills" class="py-15 md:py-20 flex flex-col">
+        <Section id="skills" class="flex flex-col">
             <Stack />
+        </Section>
+        <Section id="projects" class="py-10 flex flex-col min-h-screen">
+            <Projects />
         </Section>
     </main>
 </Layout>
