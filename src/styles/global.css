@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 @import "tailwindcss";
 
@@ -11,7 +12,7 @@
     --color-secondary: #A3D000;
     --color-dark: #000000;
     --color-contrast: #000000;
-    --font-sans: 'Inter', sans-serif;
+    --font-sans: 'DM Sans', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
     --bg-primary: #F9FAFB;
     --bg-dark: #000000;
@@ -54,5 +55,3 @@ body {
     transition: all 0.3s ease-in-out;
     background-color: #F9FAFB;
 }
-
-

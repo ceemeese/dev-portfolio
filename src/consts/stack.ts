@@ -1,4 +1,4 @@
-import type { StackItem } from '../types/stack.ts';
+import type { StackItem } from '../types/stackitemType';
 
 export const STACKITEMS: StackItem[] = [
     {name: 'Javascript', icon: 'javascript', category: 'frontend'},
@@ -7,11 +7,12 @@ export const STACKITEMS: StackItem[] = [
     {name: 'Typescript', icon: 'typescript', category: 'frontend'},
     {name: 'Node.js', icon: 'nodejs', category: 'backend'},
     {name: 'Express.js', icon: 'expressjs', category: 'backend'},
+    {name: 'JWT', icon: 'jwt', category: 'backend'},
     {name: 'SASS', icon: 'sass', category: 'frontend'},
     {name: 'Tailwind CSS', icon: 'tailwindcss', category: 'frontend'},
     {name: 'Bootstrap', icon: 'bootstrap', category: 'frontend'},
     {name: 'HTML5', icon: 'html5', category: 'frontend'},
-    {name: 'CSS.js', icon: 'css', category: 'frontend'},
+    {name: 'CSS', icon: 'css', category: 'frontend'},
     {name: 'Vue.js', icon: 'vue', category: 'frontend'},
     {name: 'Vuetify', icon: 'vuetify', category: 'frontend'},
     {name: 'Pinia', icon: 'pinia', category: 'frontend'},
@@ -27,6 +28,7 @@ export const STACKITEMS: StackItem[] = [
     {name: 'Jest', icon: 'jest', category: 'tools'},
     {name: 'Figma', icon: 'figma', category: 'tools'},
     {name: 'Notion', icon: 'notion', category: 'tools'},
+    {name: 'Vercel', icon: 'vercel', category: 'tools'},
     {name: 'Trabajo en equipo', icon: 'social2', category: 'soft'},
     {name: 'Adaptabilidad', icon: 'social2', category: 'soft'},
     {name: 'Proactividad', icon: 'social2', category: 'soft'},
