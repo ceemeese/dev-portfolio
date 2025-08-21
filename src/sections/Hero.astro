@@ -1,11 +1,12 @@
 ---
- const personalImageAlt = "Cristina Malmierca"
  import BadgetWork from "../components/BadgetWork.astro"
  import Button from "../components/Button.astro"
  import ContactIcon from "../components/svg/ContactIcon.astro"
  import LinkIcon from "../components/svg/LinkIcon.astro"
  import GitIcon from "../components/svg/GitIcon.astro"
  import PinIcon from "../components/svg/PinIcon.astro"
+
+ const personalImageAlt: string = "Cristina Malmierca"
 ---
 
 <div class="max-w-xl md:flex md:justify-center md:items-center md:flex-col md:text-center">
@@ -26,7 +27,6 @@
 
     <div>
         <h1 class="font-mono text-2xl md:text-3xl font-thin">whoami <br> <span class="text-4xl md:text-5xl font-thin mb-2 [&>strong]:font-bold font">Cristina Malmierca</span></h1>
-        <!-- <h1 class="text-4xl md:text-5xl font-thin mb-2 [&>strong]:font-bold font"><strong>Cristina Malmierca</strong></h1>-->
         <h2 class="text-xl md:text-2xl font-bold mb-4 bg-linear-to-r from-secondary via-green-500 to-emerald-500 inline-block text-transparent bg-clip-text">&lt; Full-stack web Developer /&gt;</h2>
     </div>
 
@@ -36,13 +36,13 @@
     </div>
 
     <nav class="flex items-center gap-10 mt-10 md:mt-6">
-        <Button href="mailto:cmsalvador92@gmail.com">
+        <Button href="mailto:cmsalvador92@gmail.com" alt="Contacta por correo">
             <ContactIcon />
         </Button>
-        <Button href="https://www.linkedin.com/in/cristina-malmierca/">
+        <Button href="https://www.linkedin.com/in/cristina-malmierca/" alt="Acceder a perfil de LinkedIn">
             <LinkIcon />
         </Button>
-        <Button href="https://github.com/ceemeese">
+        <Button href="https://github.com/ceemeese" alt="Acceder a perfil de GitHub">
             <GitIcon />
         </Button>
     </nav>
