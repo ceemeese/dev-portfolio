@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
         title: "Gestor de juegos de mesa",
         description: "Aplicación de asignatura Entorno Desarrollo para administrar partidas de juegos de mesa con panel de control de administrador. Incluye testing, despliegue en AWS, CI/CD y Wiki del backend en Github.",
         image: "boardgames",
-        technologies: ["Node.js", "Express.js", "MySQL", "Hoppscotch", "Jest", "AWS", "Docker", "Grafana"],
+        technologies: ["Node.js", "Express.js", "MySQL", "Hoppscotch", "Jest", "AWS", "Docker", "Kubernetes"],
         url: "https://github.com/ceemeese/boardgames"
     },
     {

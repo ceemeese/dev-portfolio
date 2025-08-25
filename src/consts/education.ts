@@ -6,15 +6,15 @@ export const EDUCATION: Education[] = [
         title: "FP Superior Desarrollo de Aplicaciones Web",
         institution: "Centro San Valero",
         description: "Formación integral en desarrollo web full-stack, bases de datos, diseño de interfaces y despliegue en cloud.",
-        technologies: ["Java", "Vue.js", "C#", "Node.js", "AWS", "MySQL", "Git"],
+        technologies: ["Java", "Vue.js", "C#", "Node.js", "AWS", "MySQL", "Git", "Docker", "Kubernetes", "HTML5", "CSS", "JavaScript", "TypeScript"],
         status: "current"
     },
     {
         year: "Feb 2023",
         title: "Desarrollo Front-end - 140 horas",
         institution: "Samsung DesArrolladoras",
-        description: "Programa intensivo de especialización en tecnologías front-end modernas y mejores prácticas de desarrollo.",
-        technologies: ["JavaScript", "HTML5", "CSS3", "React", "Responsive Design"],
+        description: "Programa intensivo de especialización en Javascript y buenas prácticas de desarrollo.",
+        technologies: ["JavaScript", "HTML5", "CSS", "Responsive Design"],
         status: "completed"
     },
     {

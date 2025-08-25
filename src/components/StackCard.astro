@@ -2,8 +2,8 @@
 const { name, icon, classLiName, className } = Astro.props;
 ---
 
-<li class={`flex-nowrap ${classLiName}`}>
-  <div class={`${className} flex items-center justify-center rounded-full bg-white text-dark border-2 border-gray-200 hover:border-secondary transition-all py-1.5 transition-color duration-300 hover:shadow-md gap-2 mt-1 md:w-30 md:h-30 md:flex md:flex-col md:rounded-3xl md:hover:scale-105`}>
+<li class={`flex-nowrap ${classLiName} transition-all duration-300 transform`}>
+  <div class={`${className} flex items-center justify-center rounded-full bg-white text-dark border-2 border-gray-200 hover:border-secondary transition-all py-1.5 duration-300 hover:shadow-md gap-2 mt-1 md:w-30 md:h-30 md:flex md:flex-col md:rounded-3xl md:hover:scale-105`}>
       <img
           src={`../iconos/${icon}.svg`}
           alt={icon}
