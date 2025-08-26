@@ -4,8 +4,9 @@ import Footer from '../sections/Footer.astro';
 import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
 
-const title: string = 'Portfolio Cristina Malmierca'
+const title: string = 'Cristina Malmierca - Full-Stack Web Developer'
 const description: string = 'Portfolio donde se muestran proyectos desarrollados y habilidades técnicas.'
+const imageUrl: string = 'https://cmalmierca.vercel.app/og-image.webp'
 ---
 
 <!doctype html>
@@ -40,6 +41,7 @@ const description: string = 'Portfolio donde se muestran proyectos desarrollados
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:locale" content="es_ES" />
+		<meta property="og:image" content={imageUrl} />
 		<meta property="og:site_name" content="Portfolio cmalmierca" />
 
 
