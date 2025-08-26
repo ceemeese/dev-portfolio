@@ -3,17 +3,49 @@ import Header from '../sections/Header.astro';
 import Footer from '../sections/Footer.astro';
 import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
+
+const title: string = 'Cristina Malmierca - Full-Stack Web Developer'
+const description: string = 'Portfolio donde se muestran proyectos desarrollados y habilidades técnicas.'
+const imageUrl: string = 'https://cmalmierca.vercel.app/images/og-image.webp'
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
+		
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link
+    		href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+			rel="preload"
+			as="style"
+			crossorigin
+		/>
+		 <link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+			rel="stylesheet"
+		/>
+
+		
 		<title>Cristina Malmierca - Proyectos &amp; Portfolio | Cristina Malmierca</title>
-		<meta name="description" content="Portfolio personal de Cristina Malmierca, donde se muestran proyectos desarrollados y habilidades técnicas.">
+		<meta property="og:title" content="Cristina Malmierca - Portfolio">
+
+		<meta property="og:url" content="https://cmalmierca.vercel.app" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:locale" content="es_ES" />
+		<meta name="image" property="og:image" content={imageUrl} />
+		<meta property="og:site_name" content="Portfolio cmalmierca" />
+
+
+		<meta name="description" content={description}>
 		<Analytics />
 	</head>
 	<body>
@@ -37,3 +69,9 @@ import Analytics from '@vercel/analytics/astro';
   }
 </style>
 
+
+<script>
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
+</script>

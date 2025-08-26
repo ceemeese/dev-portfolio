@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
         description: "Página web personal para mostrar proyectos, habilidades y experiencia. Incluye diseño minimalista y mobile first, con secciones claras de contacto y proyectos destacados. Una forma sencilla de presentarme y compartir mi trabajo.",
         image: "portfolio",
         technologies: ["Astro", "Tailwind CSS", "Vercel"],
-        url: "https://github.com/ceemeese/portfolio-dev"
+        url: "https://github.com/ceemeese/dev-portfolio"
     },
     {
         title: "Gestor de juegos de mesa",
