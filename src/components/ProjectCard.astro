@@ -1,0 +1,64 @@
+---
+import GitIcon from './svg/GitIcon.astro';
+
+interface Props {
+    className: string;
+    title: string;
+    description: string;
+    image: string;
+    url: string;
+}
+
+const { className,title, description, image, url } = Astro.props;
+
+---
+
+<div class={`${className} card group max-w-full lg:max-w-lg py-2 rounded-2xl transition-transform duration-700 ease-in-out hover:scale-105`}>
+    <a href={url} target="_blank">
+        <div class="py-3 cursor-pointer">
+
+            <div class="overflow-hidden rounded-md w-full">
+                <img src={`/images/${image}.webp`} alt="" class="rounded-md md:h-[350px] lg:h-[300px] object-cover w-full transition-transform duration-500 ">
+            </div>
+
+            <div class="py-2">
+
+                <div class="flex gap-3 items-center">
+                    <h1 class="text-base md:text-xl font-normal text-dark dark:text-primary transition-colors duration-300 group-hover:text-secondary">{title}</h1>
+                    <GitIcon className="w-4 h-4" />
+                </div>
+
+                <div class="py-2">
+                    <p class="text-gray-500 dark:text-primary text-wrap font-light">{description}</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 transform translate-y-2 text-black ">
+                <slot name="tags" />
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<script>
+    import { animate, onScroll } from 'animejs';
+
+       document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll('.card');
+        
+        cards.forEach((card, index) => {
+            animate(card, {
+                opacity: [0, 1],
+                duration: 400,
+                delay: index * 100,
+                ease: 'out-cubic',
+                autoplay: onScroll({
+                    target: card,
+                    axis: 'y',
+                    enter: 'bottom 30%',
+                })
+            });
+        });
+    });
+</script>

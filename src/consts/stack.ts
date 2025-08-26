@@ -1,0 +1,31 @@
+import type { StackItem } from '../types/stackitemType';
+
+export const STACKITEMS: StackItem[] = [
+    {name: 'Javascript', icon: 'javascript', category: 'frontend'},
+    {name: 'Java', icon: 'java', category: 'backend'},
+    {name: 'C#', icon: 'csharp', category: 'backend'},
+    {name: 'Typescript', icon: 'typescript', category: 'frontend'},
+    {name: 'Node.js', icon: 'nodejs', category: 'backend'},
+    {name: 'Express.js', icon: 'expressjs', category: 'backend'},
+    {name: 'SASS', icon: 'sass', category: 'frontend'},
+    {name: 'Tailwind CSS', icon: 'tailwindcss', category: 'frontend'},
+    {name: 'HTML5', icon: 'html5', category: 'frontend'},
+    {name: 'CSS', icon: 'css', category: 'frontend'},
+    {name: 'Vue.js', icon: 'vue', category: 'frontend'},
+    {name: 'Vuetify', icon: 'vuetify', category: 'frontend'},
+    {name: 'Pinia', icon: 'pinia', category: 'frontend'},
+    {name: 'Astro', icon: 'astro', category: 'frontend'},
+    {name: 'AWS', icon: 'aws_light', category: 'cloud'},
+    {name: 'Kubernetes', icon: 'kubernetes', category: 'cloud'},
+    {name: 'Docker', icon: 'docker', category: 'cloud'},
+    {name: 'MySQL', icon: 'mysql', category: 'database'},
+    {name: 'Git', icon: 'git', category: 'tools'},
+    {name: 'Hoppscotch', icon: 'hoppscotch', category: 'tools'},
+    {name: 'Jest', icon: 'jest', category: 'tools'},
+    {name: 'Figma', icon: 'figma', category: 'tools'},
+    {name: 'Trabajo en equipo', icon: 'social2', category: 'soft'},
+    {name: 'Adaptabilidad', icon: 'social2', category: 'soft'},
+    {name: 'Proactividad', icon: 'social2', category: 'soft'},
+    {name: 'Comunicación', icon: 'social2', category: 'soft'},
+];
+

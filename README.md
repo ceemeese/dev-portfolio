@@ -1,46 +1,39 @@
-# Astro Starter Kit: Basics
+# Portfolio de Cristina Malmierca
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este es mi portfolio personal donde muestro mis proyectos.
+Está desarrollado usando **Astro**, desplegado en **Vercel**, con animaciones de **Anime.js** e iconos de **Lucide / Iconify**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Astro](https://img.shields.io/badge/Astro-5.12.5-purple)
+![Vercel](https://img.shields.io/badge/Vercel-Hosting-black)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1.11-blue)
+![Anime.js](https://img.shields.io/badge/Anime.js-4.1.3-orange)
 
-## 🚀 Project Structure
+![Captura de mi portfolio](public/images/portfolio.webp)
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## Tecnologías utilizadas
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- **Framework / Static Site Generator:** Astro (MIT)
+- **Hosting / Despliegue:** Vercel  
+- **Animaciones:** Anime.js  (MIT)
+- **Iconos:** Lucide Icons (ISC/MIT) y Iconify / Astro Icons y Heroicons
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+## Iconos utilizados
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Este proyecto utiliza los siguientes iconos:
 
-## 👀 Want to learn more?
+- **Lucide Icons** ([https://lucide.dev](https://lucide.dev))  
+    - Licencia ISC, con partes derivadas de Feather bajo MIT.
+    - Se utiliza para importar y manejar los iconos de forma sencilla en el proyecto.
+- **Astro Icons / Iconify** ([https://iconify.design](https://iconify.design))  
+      - Licencia MIT.
+    - Se utiliza para importar y manejar los iconos de forma sencilla en el proyecto.
+- **Heroicons** ([https://heroicons.com/](https://heroicons.com/))  
+    - Licencia MIT.
+    - Solo se usan los iconos SVG directamente.
+    
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Se conservan los avisos de copyright originales de los autores.  
+Para más detalles, consulta los archivos en `licenses/`.

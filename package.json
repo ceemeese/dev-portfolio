@@ -9,6 +9,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.12.5"
+    "@astrojs/vercel": "^8.2.6",
+    "@astrojs/vue": "^5.1.0",
+    "@iconify-json/heroicons": "^1.2.2",
+    "@tailwindcss/vite": "^4.1.11",
+    "animejs": "^4.1.3",
+    "astro": "^5.12.5",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.62",
+    "@iconify/vue": "^5.0.0",
+    "astro-icon": "^1.1.5"
   }
 }

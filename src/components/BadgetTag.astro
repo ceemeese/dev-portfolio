@@ -1,0 +1,10 @@
+---
+const { icon } = Astro.props;
+---
+
+<div class="bg-gray-200 dark:border-none rounded-full flex items-center justify-center w-fit font-light gap-2 px-2 py-1">
+    <img src={`/iconos/${icon}.svg`} alt={icon} class="w-4 h-4">
+    <div class="text-xs text-black">       
+        <slot /> 
+    </div>
+</div>

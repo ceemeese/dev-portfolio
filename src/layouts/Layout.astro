@@ -1,22 +1,37 @@
+---
+import Header from '../sections/Header.astro';
+import Footer from '../sections/Footer.astro';
+import '../styles/global.css';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>Cristina Malmierca - Proyectos &amp; Portfolio | Cristina Malmierca</title>
+		<meta name="description" content="Portfolio personal de Cristina Malmierca, donde se muestran proyectos desarrollados y habilidades técnicas.">
 	</head>
 	<body>
-		<slot />
+		<Header />
+			<slot />
+		<Footer />
 	</body>
+
+	
 </html>
 
+
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+
+  :global(.dark) {
+	color: #F9FAFB;
+  }
+
+  :global(.dark) body {
+	background-color: #03170e;
+  }
 </style>
+

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-primary: #F9FAFB;
+    --color-secondary: #A3D000;
+    --color-dark: #000000;
+    --color-contrast: #000000;
+    --font-sans: 'DM Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --bg-primary: #F9FAFB;
+    --bg-dark: #000000;
+    --animate-scroll: scroll 45s linear infinite;
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0); 
+        }
+        100% {
+             transform: translateX(calc(-50%));
+        }
+    }
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    transition: all 0.3s ease-in-out;
+    background-color: #F9FAFB;
+}
