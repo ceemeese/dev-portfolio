@@ -38,6 +38,7 @@ html, body {
     padding: 0;
     width: 100%;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 html {
@@ -50,6 +51,8 @@ html {
 body {
     transition: all 0.3s ease-in-out;
     background-color: #F9FAFB;
+    width: 100%;
+    max-width: 100vw;
 }
 
 h1, h2 {
