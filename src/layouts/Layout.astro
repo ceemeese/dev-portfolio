@@ -2,6 +2,7 @@
 import Header from '../sections/Header.astro';
 import Footer from '../sections/Footer.astro';
 import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 ---
 
 <!doctype html>
@@ -13,6 +14,7 @@ import '../styles/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>Cristina Malmierca - Proyectos &amp; Portfolio | Cristina Malmierca</title>
 		<meta name="description" content="Portfolio personal de Cristina Malmierca, donde se muestran proyectos desarrollados y habilidades técnicas.">
+		<Analytics />
 	</head>
 	<body>
 		<Header />
