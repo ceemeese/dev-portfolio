@@ -3,8 +3,9 @@
 Este es mi portfolio personal donde muestro mis proyectos.
 Está desarrollado usando **Astro**, desplegado en **Vercel**, con animaciones de **Anime.js** e iconos de **Lucide / Iconify**.
 
-![Astro](https://img.shields.io/badge/Astro-5.12.5-blue)
+![Astro](https://img.shields.io/badge/Astro-5.12.5-purple)
 ![Vercel](https://img.shields.io/badge/Vercel-Hosting-black)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1.11-blue)
 ![Anime.js](https://img.shields.io/badge/Anime.js-4.1.3-orange)
 
 ![Captura de mi portfolio](public/images/portfolio.webp)
