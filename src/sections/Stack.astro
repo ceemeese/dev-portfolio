@@ -18,32 +18,37 @@ import { Icon } from 'astro-icon/components';
     <SectionTitle title="Soft & Tech Skills" />
 
     <!-- Navbar de Stack  -->
-    <nav class="flex items-center gap-5 md:justify-between transform transition-custom overflow-x-auto py-2 mb-3 md:mb-1 md:scrollbar-hidden text-nowrap">
-    {
-        NAVITEMS.map((item, index) => (
-            <a
-                class={`nav__item flex gap-1 items-center relative group transition-custom cursor-pointer ${index === 0 ? 'text-secondary font-semibold' : ''}`}
-                role="button"
-                aria-label={item.label}
-                id={item.id}
-                >
+     <div class="relative">
+        
+        <nav id="navbar" class="flex items-center gap-5 md:justify-between transform transition-custom overflow-x-auto py-2 mb-3 md:mb-1 scrollbar-hidden text-nowrap">
+        {
+            NAVITEMS.map((item, index) => (
+                <a
+                    class={`nav__item flex gap-1 items-center relative group transition-custom cursor-pointer ${index === 0 ? 'text-secondary font-semibold' : ''}`}
+                    role="button"
+                    aria-label={item.label}
+                    id={item.id}
+                    >
 
-                <Icon name={`lucide:${item.icon}`}/>
-                { item.label }
-                <span class={`absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300 ${index === 0 ? 'w-full' : ''}`}> </span>
-            </a>
-        ))
-    }
-    </nav>
+                    <Icon name={`lucide:${item.icon}`}/>
+                    { item.label }
+                    <span class={`absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300 ${index === 0 ? 'w-full' : ''}`}> </span>
+                </a>
+            ))
+        }
+        </nav>
+        <div id="gradient-left" class="absolute top-0 left-0 bottom-0 w-10 bg-gradient-to-r from-primary dark:from-background to-transparent pointer-events-none z-10 md:hidden opacity-0 transition-opacity duration-300"></div>
+        <div id="gradient-right" class="absolute top-0 right-0 bottom-0 w-15 bg-gradient-to-l from-primary dark:from-background to-transparent pointer-events-none z-10 md:hidden transition-opacity duration-300"></div>
+    </div>
 
 
     <div class="w-full overflow-hidden">
-        <ul id="stacklist" class="p-1 grid grid-cols-2 gap-1 md:flex md:py-4 md:gap-4 md:justify-center md:flex-nowrap md:min-w-max md:animate-scroll transition-all duration-700 ease-out">
+        <ul id="stacklist" class="flex py-2 md:py-4 gap-4 justify-center flex-nowrap min-w-max animate-scroll transition-all duration-700 ease-out">
             {[...STACKITEMS].map(item => (
                 <StackCard name={item.name} icon={item.icon} classLiName={`scroll-1 stack-item ${item.category} opacity-100 scale-100 transition-all duration-300 ease-in-out`} />
             ))}
             {[...STACKITEMS].map(item => (
-                <StackCard name={item.name} icon={item.icon} classLiName={`scroll-2 stack-item hidden md:block transition-all duration-300 ease-in-out opacity-100 scale-100 ${item.category}`} />
+                <StackCard name={item.name} icon={item.icon} classLiName={`scroll-2 stack-item hidden block transition-all duration-300 ease-in-out opacity-100 scale-100 ${item.category}`} />
             ))}
         </ul>
     </div>
@@ -83,25 +88,19 @@ import { Icon } from 'astro-icon/components';
                 if(selectedNav !== 'todo') {
 
                     //Layout
-                    stacklist?.classList.remove('md:animate-scroll');
-                    stacklist?.classList.remove('md:h-40');
+                    stacklist?.classList.remove('animate-scroll');
+                    //stacklist?.classList.remove('md:h-40');
 
-                    stacklist?.classList.replace('md:flex-nowrap', 'md:flex-wrap');                    
-                    stacklist?.classList.replace('md:justify-center', 'md:justify-start');
-                    stacklist?.classList.replace('md:min-w-max', 'md:max-w-full');
+                    stacklist?.classList.replace('flex-nowrap', 'flex-wrap');                    
+                    stacklist?.classList.replace('justify-center', 'justify-start');
+                    stacklist?.classList.replace('min-w-max', 'max-w-full');
 
-                    stacklist?.classList.add('md:justify-between');
+                    stacklist?.classList.add('justify-between');
 
-                    Array.from(cardsScroll).forEach((card) => {
-                        card.classList.add('hidden');
-                        card.classList.remove('md:block');
-                    });
-
-                    Array.from(cards).forEach((card) => {
-                        card.classList.add('hidden');
+                    [...cardsScroll, ...cards].forEach(card => {
                         card.classList.remove('block');
+                        card.classList.add('hidden');
                     });
-
 
                     Array.from(cards).forEach((card) => {
                         if (card.classList.contains(selectedNav)) {
@@ -112,14 +111,14 @@ import { Icon } from 'astro-icon/components';
                     
                 } else {
                     
-                    stacklist?.classList.add('md:animate-scroll');
-                    stacklist?.classList.add('md:h-40');
+                    stacklist?.classList.add('animate-scroll');
+                    //stacklist?.classList.add('md:h-40');
 
-                    stacklist?.classList.replace('md:flex-wrap', 'md:flex-nowrap');                    
-                    stacklist?.classList.replace('md:justify-start', 'md:justify-center');
-                    stacklist?.classList.replace('md:max-w-full', 'md:min-w-max');
+                    stacklist?.classList.replace('flex-wrap', 'flex-nowrap');                    
+                    stacklist?.classList.replace('justify-start', 'justify-center');
+                    stacklist?.classList.replace('max-w-full', 'min-w-max');
 
-                    stacklist?.classList.remove('md:justify-between');
+                    stacklist?.classList.remove('justify-between');
                     
                     Array.from(cards).forEach((card) => {
                         card.classList.remove('hidden');
@@ -128,12 +127,34 @@ import { Icon } from 'astro-icon/components';
 
                     
                     Array.from(cardsScroll).forEach((card) => {
-
-                        card.classList.add('md:block');
+                        card.classList.add('block');
                     });
                 }
             });
         });
+
+    function updateGradients() {
+        const navbar = document.getElementById('navbar');
+        const gradientLeft = document.getElementById('gradient-left');
+        const gradientRight = document.getElementById('gradient-right');
+        
+        if (!navbar || !gradientLeft || !gradientRight) return;
+        
+        const scrollLeft = navbar.scrollLeft;
+        const maxScroll = navbar.scrollWidth - navbar.clientWidth;
+        
+        gradientLeft.style.opacity = scrollLeft > 5 ? '1' : '0';
+        gradientRight.style.opacity = scrollLeft < maxScroll - 5 ? '1' : '0';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+            navbar.addEventListener('scroll', updateGradients);
+            window.addEventListener('resize', updateGradients);
+            updateGradients();
+        }
+    });
  
 </script>
 
