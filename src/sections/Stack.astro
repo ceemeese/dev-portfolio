@@ -37,8 +37,8 @@ import { Icon } from 'astro-icon/components';
             ))
         }
         </nav>
-        <div id="gradient-left" class="absolute top-0 left-0 bottom-0 w-10 bg-gradient-to-r from-primary to-transparent pointer-events-none z-10 md:hidden opacity-0 transition-opacity duration-300"></div>
-        <div id="gradient-right" class="absolute top-0 right-0 bottom-0 w-15 bg-gradient-to-l from-primary to-transparent pointer-events-none z-10 md:hidden transition-opacity duration-300"></div>
+        <div id="gradient-left" class="absolute top-0 left-0 bottom-0 w-10 bg-gradient-to-r from-primary dark:from-background to-transparent pointer-events-none z-10 md:hidden opacity-0 transition-opacity duration-300"></div>
+        <div id="gradient-right" class="absolute top-0 right-0 bottom-0 w-15 bg-gradient-to-l from-primary dark:from-background to-transparent pointer-events-none z-10 md:hidden transition-opacity duration-300"></div>
     </div>
 
 
@@ -89,7 +89,7 @@ import { Icon } from 'astro-icon/components';
 
                     //Layout
                     stacklist?.classList.remove('animate-scroll');
-                    stacklist?.classList.remove('h-40');
+                    //stacklist?.classList.remove('md:h-40');
 
                     stacklist?.classList.replace('flex-nowrap', 'flex-wrap');                    
                     stacklist?.classList.replace('justify-center', 'justify-start');
@@ -97,9 +97,9 @@ import { Icon } from 'astro-icon/components';
 
                     stacklist?.classList.add('justify-between');
 
-                    [...cardsScroll, ...cards].forEach((card) => {
-                        card.classList.add('hidden');
+                    [...cardsScroll, ...cards].forEach(card => {
                         card.classList.remove('block');
+                        card.classList.add('hidden');
                     });
 
                     Array.from(cards).forEach((card) => {
@@ -112,7 +112,7 @@ import { Icon } from 'astro-icon/components';
                 } else {
                     
                     stacklist?.classList.add('animate-scroll');
-                    stacklist?.classList.add('h-40');
+                    //stacklist?.classList.add('md:h-40');
 
                     stacklist?.classList.replace('flex-wrap', 'flex-nowrap');                    
                     stacklist?.classList.replace('justify-start', 'justify-center');
