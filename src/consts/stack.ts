@@ -23,7 +23,7 @@ export const STACKITEMS: StackItem[] = [
     {name: 'Hoppscotch', icon: 'hoppscotch', category: 'tools'},
     {name: 'Jest', icon: 'jest', category: 'tools'},
     {name: 'Figma', icon: 'figma', category: 'tools'},
-    {name: 'Trabajo en equipo', icon: 'social2', category: 'soft'},
+    {name: 'Equipo', icon: 'social2', category: 'soft'},
     {name: 'Adaptabilidad', icon: 'social2', category: 'soft'},
     {name: 'Proactividad', icon: 'social2', category: 'soft'},
     {name: 'Comunicación', icon: 'social2', category: 'soft'},
