@@ -16,7 +16,7 @@ import Experience from '../sections/Experience.astro';
             <Hero >
                 <slot />
             </Hero >
-            <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+            <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2" style="bottom: calc(1.25rem + env(safe-area-inset-bottom))">
                 <ArrowIcon alt="Flecha para hacer scroll a la sección de abajo" />
             </div>
         </Section>
