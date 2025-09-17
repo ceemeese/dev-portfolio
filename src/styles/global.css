@@ -12,14 +12,14 @@
     --font-mono: 'JetBrains Mono', monospace;
     --bg-primary: #F9FAFB;
     --bg-dark: #000000;
-    --animate-scroll: scroll 45s linear infinite;
+    --animate-scroll: scroll 40s linear infinite;
 
     @keyframes scroll {
         0% {
             transform: translateX(0); 
         }
         100% {
-             transform: translateX(calc(-50%));
+             transform: translateX(-50%);
         }
     }
 }
@@ -38,7 +38,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden;
 }
 
