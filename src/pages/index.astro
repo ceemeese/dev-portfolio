@@ -16,7 +16,7 @@ import Experience from '../sections/Experience.astro';
             <Hero >
                 <slot />
             </Hero >
-            <div id="arrow" class="absolute left-1/2 transform -translate-x-1/2 transition-opacity duration-500" style="bottom: calc(1.5rem + env(safe-area-inset-bottom))">
+            <div id="arrow" class="absolute left-1/2 transform -translate-x-1/2 transition-opacity duration-500" style="bottom: calc(1.75rem + env(safe-area-inset-bottom))">
                 <ArrowIcon alt="Flecha para hacer scroll a la sección de abajo" />
             </div>
         </Section>
@@ -39,7 +39,7 @@ import Experience from '../sections/Experience.astro';
     const arrow = document.getElementById('arrow') as HTMLElement;
 
     window.addEventListener('scroll', () => {
-    if (window.scrollY > 3) {
+    if (window.scrollY > 5) {
         arrow.style.opacity = '0';
     } else {
         arrow.style.opacity = '1';
