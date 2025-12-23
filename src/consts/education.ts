@@ -2,6 +2,14 @@ import type { Education } from '../types/educationType';
 
 export const EDUCATION: Education[] = [
     {
+        year: "Oct 2025 - Dic 2025",
+        title: "Prácticas Full-stack · Hiberus",
+        institution: "Hiberus",
+        description: "Prácticas de FP DAW desarrollando una aplicación full stack con Vue.js y .NET bajo metodología agile.",
+        technologies: ["Vue.js", "C#", "TypeScript", "MySQL", "Git", "Docker"],
+        status: "completed"
+    },
+    {
         year: "Sep 2023 - Actualidad",
         title: "FP Superior Desarrollo de Aplicaciones Web",
         institution: "Centro San Valero",
