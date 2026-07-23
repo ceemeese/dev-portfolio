@@ -1,0 +1,1 @@
+import{t as a,c as s,s as e}from"./anime.esm.D1ibjq0D.js";const{words:r,chars:d}=a.split("h1",{words:{wrap:"clip"},chars:!0});s({defaults:{ease:"inOut(3)",duration:650}}).add(r,{y:[t=>+t.dataset.line%2?"100%":"-100%","0%"]},e(125)).init();

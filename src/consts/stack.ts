@@ -3,7 +3,8 @@ import type { StackItem } from '../types/stackitemType';
 export const STACKITEMS: StackItem[] = [
     {name: 'Javascript', icon: 'javascript', category: 'frontend'},
     {name: 'Java', icon: 'java', category: 'backend'},
-    {name: 'C#', icon: 'csharp', category: 'backend'},
+    //{name: 'C#', icon: 'csharp', category: 'backend'},
+    {name: '.NET', icon: 'DotNet', category: 'backend'},
     {name: 'Typescript', icon: 'typescript', category: 'frontend'},
     {name: 'Node.js', icon: 'nodejs', category: 'backend'},
     {name: 'Express.js', icon: 'expressjs', category: 'backend'},
@@ -15,6 +16,7 @@ export const STACKITEMS: StackItem[] = [
     {name: 'Vuetify', icon: 'vuetify', category: 'frontend'},
     {name: 'Pinia', icon: 'pinia', category: 'frontend'},
     {name: 'Astro', icon: 'astro', category: 'frontend'},
+    {name: 'Vercel', icon: 'vercel', category: 'cloud'},
     {name: 'AWS', icon: 'aws_light', category: 'cloud'},
     {name: 'Kubernetes', icon: 'kubernetes', category: 'cloud'},
     {name: 'Docker', icon: 'docker', category: 'cloud'},
