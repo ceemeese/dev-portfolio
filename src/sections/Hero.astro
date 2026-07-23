@@ -4,6 +4,7 @@
  import ContactIcon from "../components/svg/ContactIcon.astro"
  import LinkIcon from "../components/svg/LinkIcon.astro"
  import GitIcon from "../components/svg/GitIcon.astro"
+ import DownloadIcon from "../components/svg/DownloadIcon.astro"
  import PinIcon from "../components/svg/PinIcon.astro"
 
  const personalImageAlt: string = "Cristina Malmierca"
@@ -37,14 +38,17 @@
     </div>
 
     <nav class="flex items-center gap-10 mt-4 md:mt-6">
-        <Button href="mailto:cmsalvador92@gmail.com" alt="Contacta por correo">
+        <Button href="mailto:cmsalvador92@gmail.com" alt="Contacta por correo" title="Contacto">
             <ContactIcon />
         </Button>
-        <Button href="https://www.linkedin.com/in/cristina-malmierca/" alt="Acceder a perfil de LinkedIn">
+        <Button href="https://www.linkedin.com/in/cristina-malmierca/" alt="Acceder a perfil de LinkedIn" title="LinkedIn">
             <LinkIcon />
         </Button>
-        <Button href="https://github.com/ceemeese" alt="Acceder a perfil de GitHub">
+        <Button href="https://github.com/ceemeese" alt="Acceder a perfil de GitHub" title="GitHub">
             <GitIcon />
+        </Button>
+        <Button href="/CV_Malmierca.pdf" download alt="Descargar CV" title="Descargar CV">
+            <DownloadIcon />
         </Button>
     </nav>
 
