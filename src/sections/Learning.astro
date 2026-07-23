@@ -1,0 +1,30 @@
+---
+import SectionTitle from "../components/SectionTitle.astro";
+import { LEARNING } from "../consts/learning";
+---
+
+<div class="flex flex-col">
+  <SectionTitle title="Formación continua" />
+
+  <div class="flex flex-col gap-3">
+    {
+      LEARNING.map((item) => (
+        <div class="flex items-center gap-4 border-l-2 border-secondary pl-4 py-2">
+          <img
+            src={`/iconos/${item.icon}.svg`}
+            alt={item.title}
+            class="w-8 h-8 object-contain flex-shrink-0"
+          />
+          <div class="flex flex-col flex-1">
+            <span class="text-base font-normal text-dark dark:text-primary">{item.title}</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">{item.subtitle}</span>
+          </div>
+          <span class="flex items-center gap-1.5 text-xs px-2.5 py-0.5 rounded-full border border-secondary text-secondary">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+            {item.status}
+          </span>
+        </div>
+      ))
+    }
+  </div>
+</div>

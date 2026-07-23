@@ -10,12 +10,12 @@ export const EDUCATION: Education[] = [
         status: "completed"
     },
     {
-        year: "Sep 2023 - Actualidad",
+        year: "Sep 2023 - Jun 2026",
         title: "FP Superior Desarrollo de Aplicaciones Web",
         institution: "Centro San Valero",
         description: "Formación integral en desarrollo web full-stack, bases de datos, diseño de interfaces y despliegue en cloud.",
         technologies: ["Java", "Vue.js", "C#", "Node.js", "AWS", "MySQL", "Git", "Docker", "Kubernetes", "HTML5", "CSS", "JavaScript", "TypeScript"],
-        status: "current"
+        status: "completed"
     },
     {
         year: "Feb 2023",
