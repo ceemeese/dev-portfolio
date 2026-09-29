@@ -3,4 +3,5 @@ export interface LearningItem {
     subtitle: string;
     status: string;
     icon: string;
+    iconDark?: string;
 }
