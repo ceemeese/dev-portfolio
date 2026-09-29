@@ -2,6 +2,14 @@ import type { Education } from '../types/educationType';
 
 export const EDUCATION: Education[] = [
     {
+        year: "Sept 2026 - Actualmente",
+        title: "Junior Full-Stack · Lleida.net",
+        institution: "Lleida.net",
+        description: "Desarrollo de aplicaciones, actualmente en fase de formación",
+        technologies: ["Vue.js", "Pike", "Python", "TypeScript", "MySQL", "Git"],
+        status: "in progress"
+    },
+    {
         year: "Oct 2025 - Dic 2025",
         title: "Prácticas Full-stack · Hiberus",
         institution: "Hiberus",
@@ -10,16 +18,16 @@ export const EDUCATION: Education[] = [
         status: "completed"
     },
     {
-        year: "Sep 2023 - Actualidad",
+        year: "Sep 2023 - Jun 2026",
         title: "FP Superior Desarrollo de Aplicaciones Web",
         institution: "Centro San Valero",
         description: "Formación integral en desarrollo web full-stack, bases de datos, diseño de interfaces y despliegue en cloud.",
         technologies: ["Java", "Vue.js", "C#", "Node.js", "AWS", "MySQL", "Git", "Docker", "Kubernetes", "HTML5", "CSS", "JavaScript", "TypeScript"],
-        status: "current"
+        status: "completed"
     },
     {
         year: "Feb 2023",
-        title: "Desarrollo Front-end - 140 horas",
+        title: "Desarrollo Front-end (Nivel 2) - 140 horas",
         institution: "Samsung DesArrolladoras",
         description: "Programa intensivo de especialización en Javascript y buenas prácticas de desarrollo.",
         technologies: ["JavaScript", "HTML5", "CSS", "Responsive Design"],
